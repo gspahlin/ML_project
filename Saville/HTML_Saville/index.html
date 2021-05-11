@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Prediction using Decision Trees and Random Forests</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="col-sm-12 col-md-8 col-lg-8">
+    <h2 class="text-left">Using the Machine learning tools to predict diseases based on a set of disease symptoms</h2>
+    <hr class="my-4">
+    
+    
+    <p>A disease dataset was downloaded from https://www.kaggle.com/kumar9249/disease-prediction. 
+      This dataset consists of 42 diseases, with 133 associated symptoms.  This page describes the results of Decision Tree 
+      and Random Forest models used to predict specific diseases based on lists of symptoms.
+    </p>
+  </div>
+  <div>
+    <h3>A summary of the diseases included in this dataset, along with numbers of cases for each</h3>
+    <a target="_blank" href="Resources/images/disease_counts.png">
+      <img src="Resources/images/disease_counts.png" alt="Disease Counts">
+    </a>
+    </div>
+    <div>
+      <hr>
+      <h3>Decision tree </h3>
+    
+    <p>Python was used to develop decision tree models to predict diseases based on disease symptoms.  The datset was split 
+    into training and testing sets, then decsion trees were generated based on the training set.  For this particular example
+    The data was split 75/25 training/test.  A figure showing the actual decision tree as visualized using Fraphviz is shown
+    at the bottom of the page.
+
+    The accuracy for this model was
+    training: 1.0
+    test: 0.991
+  
+    A Feature importance analysis was done to show the relative importance of various features (symptoms in this case) 
+    in the decision tree.  The results of this analysis are shown below.</p>
+
+  </div>
+  <div>
+    <h3>A summary of feature importance for the Disease Prediction Decision Tree</h3>
+    <a target="_blank" href="Resources/images/DT_importances.png">
+      <img src="Resources/images/DT_importances.png" alt="Feature Importance - DT">
+    </a>
+    </div>
+    <div>
+    
+      <hr>
+      <h3>Random Forest </h3>
+    
+    <p>Next the Random Forest algoritm was used to generate a prediction model. The Random Forest is a collection of Decision Trees,
+      which are then averaged in an attempt to develop a more robust model.  The accuracy results for this particular Random Forest
+      model were:
+    training: 1.0
+    test: 0.991
+  
+    A Feature importance analysis was also done to show the relative importance of various features  The results of this analysis are shown below.</p>
+
+  </div>
+  <div>
+    <h3>A summary of feature importance for the Random Forest method</h3>
+    <a target="_blank" href="Resources/images/forest_importances.png">
+      <img src="Resources/images/forest_importances.png" alt="Feature Importance - RF">
+    </a>
+    </div>
+<hr>
+    <div>
+      <h3>The actual decision tree</h3>
+      <a target="_blank" href="Resources/images/tree.dot.png">
+        <img src="Resources/images/tree.dot.png" alt="The tree">
+      </a>
+      </div>
+      
+</body>
+
+</html>
