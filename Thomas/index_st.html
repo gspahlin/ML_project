@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Prediction using K-Nearest Neighbors</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="col-sm-12 col-md-8 col-lg-8">
+    <h2 class="text-left">Using K-Nearest Neighbors to predict diseases based on a set of disease symptoms</h2>
+    <hr class="my-4">
+    
+    
+    <p>The dataset was downloaded from https://www.kaggle.com/kumar9249/disease-prediction. 
+      This dataset consists of 42 diseases, with 133 associated symptoms (features).  Below describes the results of K-Nearest 
+      Neighbors to predict specific diseases based on lists of symptoms.
+    </p>
+  </div>
+  
+      <hr>
+      <h3>Machine Learning Basics with the K-Nearest Neighbors Algorithm</h3>
+    
+    <p>The k-nearest neighbors (KNN) algorithm is a simple, easy-to-implement supervised machine learning algorithm that can be used 
+       to solve both classification and regression problems.  I used Python to load in the dataset and clean.  Once I was satisfied 
+       with how the data was presented I needed to loop through the different K values to see which has the highest accuracy.  
+       I settled on a K value of 3 based on the results of the graph.
+    </p>
+
+  </div>
+  <div>
+    <h3>Testing Accuracy Score vs K-Neighbors</h3>
+    <a target="_blank" href="k_values.png">
+      <img src="k_values.png" alt="K Values">
+    </a>
+    </div>
+    <div>
+    
+      <hr>
+      <h3>Accuracy Rate and Error Rate </h3>
+    
+    <p>I also wrote code to find the accuracy rate and error rate for K Neighbors up to 40.</p>
+
+  </div>
+  <div>
+    <h3>Accuracy Rate Graph</h3>
+    <a target="_blank" href="accuracy_rate.png">
+      <img src="accuracy_rate.png" alt="Accuracy Rate">
+    </a>
+    </div>
+<hr>
+    <div>
+      <h3>Error Rate</h3>
+      <a target="_blank" href="error_rate.png">
+        <img src="error_rate.png" alt="Error Rate">
+      </a>
+      </div>
+
+  <hr>
+    <div>
+      <h3>Classification Report when K=11</h3>
+        <a target="_blank" href="classification_report_k=11.PNG">
+          <img src="classification_report_k=11.PNG" alt="Classification Report K=11">
+        </a>
+        </div>
+      
+</body>
+
+</html>
